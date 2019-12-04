@@ -1,0 +1,25 @@
+{
+  "name": "mrbig00/yii2-unite-gallery",
+  "description": "Unite gallery wrapper for Yii2",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zoltán Szántó",
+      "email": "mrbig00@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/unitegallery": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "mrbig00\\unitegallery\\": ""
+    }
+  }
+}
