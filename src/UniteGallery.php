@@ -1,5 +1,5 @@
 <?php
-namespace mrbig00\unitegallery;
+namespace kilyakus\widget\unitegallery;
 
 use yii\base\Widget;
 
