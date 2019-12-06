@@ -7,17 +7,14 @@ JS;
 $this->registerJs($script, \yii\web\View::POS_READY);
 
 $videoFormats = [
-	'youtube',
-	'vimeo',
-	'html5video',
-	'wistia',
+	'video',
 ];
 ?>
 
 <div id="<?= $galleryId ?>">
     <?php 
     foreach ($items as $item) {
-    	if(in_array($item['data-type'], $videoFormats)){
+    	if(in_array($this->context->theme, $videoFormats)){
     		echo Html::tag('div',null,$item);
 		}else{
 			echo Html::img($item['data-thumb'],$item);

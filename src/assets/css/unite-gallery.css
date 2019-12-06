@@ -101,9 +101,9 @@
 
 /*---------------------VIDEO_PLAYER------------------*/
 
-.ug-gallery-wrapper .ug-videoplayer {position:absolute;z-index:100;background-color:#000000;background-image:url('../images/loader-black1.gif');background-repeat:no-repeat;background-position:center center;box-sizing:border-box;-moz-box-sizing:border-box;}
+.ug-gallery-wrapper .ug-videoplayer {position:absolute;z-index:100;background-image:url('../images/loader-black1.gif');background-repeat:no-repeat;background-position:center center;box-sizing:border-box;-moz-box-sizing:border-box;}
 
-.ug-videoplayer .ug-videoplayer-wrapper {width:100%;height:100%;background-color:#000000;background-image:url('../images/loader-black1.gif');background-repeat:no-repeat;background-position:center center;}
+.ug-videoplayer .ug-videoplayer-wrapper {width:100%;height:100%;background-color:#000000;background-image:url('../images/loader-black1.gif');background-repeat:no-repeat;background-position:center center;overflow:hidden;border-radius:5px;}
 
 
 .ug-videoplayer .ug-videoplayer-button-close {position:absolute;height:64px;width:64px;background-image:url('../images/button-close.png');cursor:pointer;z-index:1000;}
@@ -229,7 +229,7 @@ img.ug-sepia-effect {-webkit-filter:sepia(1);-webkit-filter:sepia(100%); -moz-fi
 
 /*---------------------STRIP_PANEL------------------*/
 
-.ug-gallery-wrapper .ug-strip-panel {position:absolute;background-color:#000000;z-index:2;}
+.ug-gallery-wrapper .ug-strip-panel {position:absolute;/*background-color:#000000;*/z-index:2;}
 
 .ug-strip-panel .ug-strip-arrow {position:absolute;cursor:pointer;}
 

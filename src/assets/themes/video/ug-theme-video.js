@@ -7,7 +7,7 @@ else
 
 /**
  * Video gallery theme
- * themes: right-thumb | right-title-only | right-no-thumb | bottom-text
+ * themes: right-thumb | right-thumb-only | right-title-only | right-no-thumb | bottom-text
  */
 function UGTheme_video(){
 
@@ -28,10 +28,10 @@ function UGTheme_video(){
 	
 	//global defaults
 	var g_defaults = {
-			gallery_width:1100,
-			slider_controls_always_on:true,
+			gallery_width:1120,
+			slider_controls_always_on:false,
 			strippanel_enable_handle:false,
-			strippanel_enable_buttons: false,
+			strippanel_enable_buttons: true,
 			strip_space_between_thumbs: 0,
 			strippanel_padding_top: 0,
 			strippanel_padding_bottom: 0,
@@ -172,6 +172,8 @@ function UGTheme_video(){
 			html += "<div href='javascript:void(0)' class='ug-button-next-video'></div>"
 			html += "</div>"
 			
+			html += "<div class='ug-default-button-play'></div>"
+
 			g_objWrapper.append(html);
 			
 			g_objButtonsPanel = g_objWrapper.children(".ug-video-buttons-panel");
@@ -189,6 +191,7 @@ function UGTheme_video(){
 	 */
 	function setHtmlThumb(objThumbWrapper, objItem){
 
+		var showTitl = true;
 		var showDesc = true;
 		var showIcon = false;
 		
@@ -199,6 +202,11 @@ function UGTheme_video(){
 			case "right-thumb":
 				showIcon = true;
 			break;
+			case "right-thumb-only":
+				showIcon = true;
+				showTitl = false;
+				showDesc = false;
+			break;
 		}
 		
 		var html = "<div class='ug-thumb-inner'>";
@@ -207,8 +215,10 @@ function UGTheme_video(){
 			html += "<div class='ug-thumb-icon' style='background-image:url(\""+objItem.urlThumb+"\")'></div>";
 			html += "<div class='ug-thumb-right'>";
 		}
-			
-		html += "<div class='ug-thumb-title'>" + objItem.title + "</div>";
+		
+		if(showTitl == true){
+			html += "<div class='ug-thumb-title'>" + objItem.title + "</div>";
+		}
 		
 		if(showDesc == true)
 			html += "<div class='ug-thumb-desc'>" + objItem.description + "</div>";

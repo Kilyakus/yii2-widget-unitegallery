@@ -8,6 +8,8 @@ class UniteGalleryAsset extends AssetBundle
 {
     public static $theme;
 
+    public static $skin;
+
     // public $jsOptions = [
     //     'position' => View::POS_END,
     // ];
@@ -54,7 +56,7 @@ class UniteGalleryAsset extends AssetBundle
                 break;
             case 'video':
                 $this->js[] = 'themes/' . self::$theme . '/ug-theme-' . self::$theme . '.js';
-                $this->css[] = 'themes/' . self::$theme . '/skin-right-thumb.css';
+                $this->css[] = 'themes/' . self::$theme . '/skin-' . self::$skin . '.css';
                 break;
         }
     }
